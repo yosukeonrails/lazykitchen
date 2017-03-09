@@ -1,0 +1,298 @@
+@light-black: #262626;
+@dark-grey:#333333;
+@white: #f4f2fc;
+@green: #4CAF50;
+@pink: #FF6D6D;
+@light-grey:#d9d9d9;
+@orange:#ff7733;
+@green: #4CAF50;
+@light-blue:#ccccff;
+@light-green: #66ffb3;
+@baloo: 'Baloo Da', cursive;
+@font1:'Fredoka One', cursive;
+@font2: 'Droid Sans', sans-serif;
+@font3: 'Raleway', sans-serif;
+@font4: 'Work Sans', sans-serif;
+@font5: 'Eczar', serif;
+@font6: 'Dosis', sans-serif;
+@font7: 'Hind', sans-serif;
+@font8: 'Cabin', sans-serif;
+@font9: 'Nunito', sans-serif;
+@blue: #7599d1;
+@mont:'Montserrat', sans-serif;
+
+
+
+
+@ratio:1;
+@measurement: @ratio * 200px;
+@half:@measurement/2;
+
+
+@outter-measurement: @measurement - 10px * @ratio ;
+@outter-half:@outter-measurement/2;
+
+
+
+@inner-measurement: @outter-measurement - 20px * @ratio;
+@inner-half:@inner-measurement/2;
+
+@lazykitchen-yellow:rgb(242, 213, 159);
+@lazykitchen-background:#E4F0B5;
+@lazykitchen-background-darker:rgba(179, 188, 144, 0.99);
+
+.centralize {
+  margin-left: auto;
+  margin-right: auto;
+}
+.floatLeft {
+   float:left;
+}
+
+
+
+///// ANIMATION KEYFRAMES //////
+
+.fadeinslow {
+  animation: fadein 1s ease-in forwards;
+}
+
+@keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.drop{
+  animation: drop 0.5s ease-in forwards;
+}
+
+@keyframes drop {
+    0%{
+      opacity: 0;
+      transform:translate(0px,-100px);
+    }
+
+    70%{
+      opacity: 0.5;
+      transform:translate(0px,50px)
+    }
+  100%{
+    opacity: 1;
+    transform:translate(0px,0px);
+  }
+}
+
+.slidefromleft {
+  animation: slidefromleft 0.5s ease-in forwards;
+}
+
+@keyframes slidefromleft {
+    0% {
+      opacity: 0;
+      transform:translate(-300px,0px)
+    }
+    100% {
+      opacity: 1;
+      transform:translate(0px,0px);
+    }
+}
+
+
+//////// CSS ////////
+
+
+
+h1{
+  font-family: 'Pacifico', cursive;
+
+}
+
+.logo-container{
+    .centralize;
+    width:300px;
+ }
+
+
+.header {
+  position: relative;
+  padding-top: 30px;
+  height: 250px;
+}
+
+.header:after {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url( 'http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/anne-preble-198119_zpsx8w1yxuv.jpg ') ;
+  background-color:@lazykitchen-background;
+  background-repeat: no-repeat;
+  height: 250px;
+  content : "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: .8;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  filter: blur(5px);
+  -webkit-filter: blur(0.8px);
+}
+
+
+.circle {
+  .centralize;
+  background-color:@lazykitchen-yellow;
+		border-radius: 50%;
+	width: @measurement;
+	height: @measurement;
+ position: relative;
+}
+
+.circle1 {
+   position: absolute;
+   box-sizing: border-box;
+   border:4px solid white;
+		border-radius: 50%;
+	  width:@outter-measurement;
+	  height:@outter-measurement;
+    top: 50%;
+   left: 50%;
+   margin: -(@outter-half) 0px 0px -(@outter-half);
+}
+
+.circle2 {
+   position: absolute;
+   box-sizing: border-box;
+   border:2px solid white;
+		border-radius: 50%;
+	  width:@inner-measurement;
+	  height:@inner-measurement ;
+    top: 50%;
+   left: 50%;
+   margin: -(@inner-half ) 0px 0px -(@inner-half );
+   padding-top: 20px;
+
+   p{
+     margin-top: 20px;
+     text-align: center;
+     font-family: 'Pacifico', cursive;
+     font-size: 30px;
+   }
+}
+
+// .circle2 {
+//      position: absolute;
+//    box-sizing: border-box;
+//    border:4px solid black;
+// 		border-radius: 50%;
+// 	width: @half;
+// 	height:@half;
+//     top: 50%;
+//    left: 50%;
+//    margin: -125px 0px 0px -125px;
+// }
+
+
+////  CONTENT/////
+
+  p{
+    font-size: 20px;
+    font-family: 'Mandali', sans-serif;
+  }
+
+h1 {
+
+}
+  .content-text {
+    padding: 30px;
+    .centralize;
+    width:500px;
+  }
+
+.content1  {
+    background-color: @lazykitchen-background;
+    padding: 60px;
+   .centralize;
+   height: 650px;
+  min-width: 750px;
+  img{
+    display: block;
+    width:400px;
+    .centralize;
+  }
+   h1{text-align: center;
+   font-family: 'Mukta Vaani', sans-serif;}
+}
+
+
+
+.content2 {
+
+  padding: 60px;
+  .centralize;
+  background-color: @lazykitchen-background-darker;
+  height: 650px;
+
+  img{
+    display: block;
+    .centralize;
+    width:400px;
+  }
+  h1{
+    text-align: center;
+  font-family: 'Mukta Vaani', sans-serif;}
+}
+
+
+.content3 {
+
+  padding:30px;
+
+  .centralize;
+
+   .content3-text {
+   padding: 30px;
+   .centralize;
+   width:500px;
+
+ }
+
+  img{
+    display: block;
+    .centralize;
+    vertical-align: middle;
+    width: 40%;
+    min-width: 400px;
+  }
+  h1{
+text-align: center;
+font-size: 70px;
+font-family: 'Just Another Hand', cursive;
+  }
+}
+
+.content4 {
+    background-color:#ffa366;
+    height: 300px;
+    padding: 50px;
+    h1 {
+          font-family: 'Sriracha', cursive;
+    }
+}
+
+.browser{
+  .lazy-item{
+    float:left;
+  }
+}
+
+@media (min-width:992px) {
+  .content4 {
+          height: 1000px;
+  }
+}

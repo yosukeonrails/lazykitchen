@@ -11,8 +11,8 @@ var ItemSchema = new mongoose.Schema({
          usd:Number,
          cny:Number
        },
-    id:String
-
+    id:String,
+    pictureUrl:String
 });
 
 var Item= module.exports = mongoose.model('Item', ItemSchema);

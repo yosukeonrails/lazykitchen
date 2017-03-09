@@ -62,6 +62,19 @@ Order.findOneAndUpdate({ id: req.body.id},{$set:orderData},{upsert:true, new:tru
 });
 
 
+app.get('/items', function(req, res){
+
+    Item.find({}, function(err, data){
+
+          if(err){
+
+          }
+
+      res.json(data);
+  });
+
+});
+
 /// post a product as admin //
 app.post('/item', function(req, res){
 
@@ -74,7 +87,8 @@ app.post('/item', function(req, res){
       usd:req.body.usd,
       cny:req.body.cny
     },
-    id:req.body.id
+    id:req.body.id,
+    pictureUrl:req.body.pictureUrl
 };
 
 Item.findOneAndUpdate({ id:req.body.id},{$set:itemData},{upsert:true, new:true},function(err, data){

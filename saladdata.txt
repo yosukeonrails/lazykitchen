@@ -1,0 +1,125 @@
+
+top: http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/lazinkitchentop_zpsrcqgavnn.jpg
+bottom: http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/bottom_zpscxsxoyxm.jpg
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+{
+ "eng":"salad pack",
+  "cant":"???",
+  "mand":"???",
+  "hkd":120,
+  "usd":1.5,
+  "cny":120,
+ "id":"001"
+}
+
+
+
+Item:{  name{eng, cantonese,mandarin} ,    
+price per unit:{ } ,     u
+nit{ ex:kg , pound or chinese unit }   }
+
+Lazy Kitchen In Chinese: ????
+
+shroom)??$5.2/LBhttp://www.traditionaloven.com/culinary-arts/weight/convert-hong-kong-catty-weight-to-kilogram-kg.html unit
+
+**all price are stated in USD
+
+1 Salad Pack with sauce??? $5/ pack
+2. Cherry tomato ??? $1.5/l b
+3. Meatballs  ???$5.2/LB
+4. Soup pack ??$3/pk
+5. Flowering Cabbage (Choi Sum) ??$1.3 /catty
+6. Chinese Kale ?? $1.3 /catty
+7. Tomato ??$1/catty
+8. Okra ??$2/pack
+9. Purple Sweet Potato ?? $0.8/catty
+10. Meatballs (with mu
+

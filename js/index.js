@@ -8,8 +8,8 @@ require('babel-polyfill');
   var hashHistory = router.hashHistory;
   var IndexRoute = router.IndexRoute;
 
-  import MainApp from './components/mainapp.js';
-  import AppContainer from './components/app.js';
+  import MainContent from './components/maincontent.js';
+  import Appv2Container from './components/appv2.js';
  import BrowserContainer from './components/browser.js';
   import { Provider } from 'react-redux';
   import store from './store';
@@ -17,9 +17,9 @@ require('babel-polyfill');
 
   var routes = (
       <Router history={hashHistory}>
-         <Route path="/" component={AppContainer}>
-         
-             <IndexRoute component={MainApp} />
+         <Route path="/" component={Appv2Container}>
+
+             <IndexRoute component={MainContent} />
                <Route path="/browser" component={BrowserContainer} />
 
 

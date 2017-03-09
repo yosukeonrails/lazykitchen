@@ -16,47 +16,15 @@ var paddingZero= {
        <div>
 
        <div className="row">
-
           <div className="col-md-8">
-
                 <div className="content3">
-
                     <Content3Container/>
-
                 </div>
-
           </div>
-
-
       <div className="col-md-4">
-
-
-                    <Content4Container/>
-
-
-
+                <Content4Container/>
       </div>
-
-
 </div>
-
-      <div className="row">
-
-            <div style={paddingZero}  className="col-md-6">
-
-                <Content1Container/>
-
-            </div>
-
-
-            <div style={paddingZero}  className="col-md-6">
-
-                <Content2Container/>
-
-            </div>
-
-      </div>
-
 
 
         </div>

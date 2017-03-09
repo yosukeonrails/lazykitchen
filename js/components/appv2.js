@@ -10,6 +10,17 @@ export class Appv2 extends React.Component{
 
   }
 
+      gotoAbout(){
+
+        this.props.dispatch(aboutview());
+      }
+      gotoShop(){
+        this.props.dispatch(shopview());
+      }
+      gotoOrder(){
+        this.props.dispatch(orderview());
+      }
+
   render () {
 
 
@@ -42,16 +53,7 @@ export class Appv2 extends React.Component{
               </div>
 
               </div>
-              <div className="nav-menu">
-              <div className="menu-container">
 
-              <div className="nav-li-container">
-                <li>About</li>
-                  <li>Shop</li>
-                    <li>Blog</li>
-                </div>
-                </div>
-              </div>
                         <div className="main-content-container">
                           {this.props.children}
                         </div>

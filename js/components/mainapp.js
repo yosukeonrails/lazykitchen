@@ -6,7 +6,15 @@ import Content1Container from './content1.js';
 import Content2Container from './content2.js';
 import Content3Container from './content3.js';
 import Content4Container from './content4.js';
-var MainApp= function(){
+var SiteContent=''
+import About from './about.js';
+import ShopContainer from './shop.js';
+import BlogContainer from './blog.js';
+var MainApp= function(props){
+
+console.log(props);
+
+
 
 var paddingZero= {
    padding:'0px'
@@ -14,17 +22,9 @@ var paddingZero= {
 
   return(
        <div>
-
-       <div className="row">
-          <div className="col-md-8">
-                <div className="content3">
-                    <Content3Container/>
-                </div>
-          </div>
-      <div className="col-md-4">
-                <Content4Container/>
-      </div>
-</div>
+          <div className="main-content-container">
+                {props.content}
+         </div>
 
 
         </div>

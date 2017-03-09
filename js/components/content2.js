@@ -16,7 +16,7 @@ export class Content2 extends React.Component{
 
     return(
 
-      <div className='content2'>
+      <div className='content2 w3-panel w3-card-8'>
 
       <img src={content2_img}></img>
       <h1>Tomatoes 4 your Health!</h1>

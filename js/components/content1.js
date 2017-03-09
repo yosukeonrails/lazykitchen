@@ -17,13 +17,15 @@ export class Content1 extends React.Component{
 
     return(
 
-      <div className='content1'>
+      <div className='content1 w3-panel w3-card-8'>
 
       <img src={content1_img}></img>
         <h1>Trending Salad Recepe! </h1>
         <div className="content-text">
+
         <p>Toss sliced fennel, fennel fronds, celery root, radicchio, celery leaves, parsley, and marjoram in a large bowl to combine; season with salt and pepper. Drizzle with oil and lemon juice and toss to coat; taste and season with more salt and pepper if needed. Pile salad lightly onto plates.</p>
           <button>read more..</button>
+
         </div>
 
       </div>

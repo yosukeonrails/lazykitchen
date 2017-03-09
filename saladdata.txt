@@ -1,7 +1,7 @@
 
 top: http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/lazinkitchentop_zpsrcqgavnn.jpg
 bottom: http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/bottom_zpscxsxoyxm.jpg
-
+logo:http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/lazykitchenlogo_zpspwzwen9a.jpg
 {
  "eng":"salad pack",
   "cant":"???",

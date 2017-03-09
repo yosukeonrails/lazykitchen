@@ -7,14 +7,13 @@ var router = require('react-router');
 var Router = router.Router;
 var Route = router.Route;
 var Link = router.Link;
-import Content1Container from './content1.js';
-import Content2Container from './content2.js';
+
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
 
 
-export class Blog extends React.Component {
+export class Shop extends React.Component {
 
      constructor(props){
          super(props);
@@ -26,12 +25,8 @@ export class Blog extends React.Component {
 
                 <div className="content0">
 
-                  <div className="Blog">
-
-                    <Content1Container/>
-
-                    <Content2Container/>
-
+                  <div className="shop">
+                    <h1> Main Shop </h1>
                   </div>
                 </div>
      );
@@ -46,6 +41,6 @@ var mapStateToProps=function(state){
 
 }
 
-  var BlogContainer= connect(mapStateToProps)(Blog)
+  var ShopContainer= connect(mapStateToProps)(Shop)
 
-export default BlogContainer;
+export default ShopContainer;

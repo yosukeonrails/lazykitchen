@@ -2,20 +2,140 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+import {connect} from 'react-redux';
 import MainApp from './mainapp.js'
+var mainContent= <About/>;
+import About from './about.js';
+import ShopContainer from './shop.js';
+import BlogContainer from './blog.js';
 
-var MainContent= function(){
+export class MainContent extends React.Component {
+  constructor(props){
+   super(props);
 
-var paddingZero= {
-   padding:'0px'
-};
+         this.gotoAbout= this.gotoAbout.bind(this);
+         this.gotoShop= this.gotoShop.bind(this);
+         this.gotoBlog= this.gotoBlog.bind(this);
+  }
 
-  return(
-       <div>
-          <MainApp/>
+
+
+gotoAbout(){
+
+    var dis=this;
+
+        $('.liSelector').animate({marginLeft:"0px"}, 100 , function(){
+             $('.liSelector').css("margin-left", "0px");
+        });
+
+
+        $('.content0').animate({left: "140px" , opacity:"0"}, 200 , function(){
+
+
+              console.log('animated content');
+                mainContent= <About/>;
+               dis.setState({selectedContent:'about'});
+
+              $('.content0').css("opacity", "0px");
+                 $('.content0').css("left", "-140px");
+
+              $('.content0').animate({left:"0px", opacity:"1"}, 200 , function(){
+                 console.log ('shop ready');
+              });
+
+
+        });
+
+
+
+}
+gotoShop(){
+
+        $('.liSelector').animate({marginLeft:"50px"}, 100 , function(){
+             $('.liSelector').css("margin-left", "50px");
+        });
+
+        var dis=this;
+
+        $('.content0').animate({left: "-140px" , opacity:"0"}, 200 , function(){
+
+              console.log('animated content');
+              mainContent= <ShopContainer/>;
+              dis.setState({selectedContent:'shop'});
+              $('.content0').css("opacity", "0px");
+                 $('.content0').css("left", "140px");
+
+              $('.content0').animate({left:"0px", opacity:"1"}, 200 , function(){
+                 console.log ('shop ready');
+              });
+
+
+        });
+
+
+}
+gotoBlog(){
+
+    var dis=this;
+
+        $('.liSelector').animate({marginLeft:"100px"},100 , function(){
+             $('.liSelector').css("margin-left", "100px");
+        });
+
+        $('.content0').animate({left: "-140px" , opacity:"0"}, 200 , function(){
+
+              console.log('animated content');
+                  mainContent= <BlogContainer/>;
+                dis.setState({selectedContent:'blog'});
+              $('.content0').css("opacity", "0px");
+                 $('.content0').css("left", "140px");
+
+              $('.content0').animate({left:"0px", opacity:"1"}, 200 , function(){
+                 console.log ('shop ready');
+              });
+
+
+        });
+
+
+
+}
+
+  render(){
+
+    console.log(this.props);
+
+    return (
+      <div>
+      <div className="nav-menu">
+      <div className="menu-container">
+
+      <div className="nav-li-container">
+
+        <a><li onClick={this.gotoAbout}>About</li></a>
+        <a><li onClick={this.gotoShop}>Shop</li></a>
+          <a><li onClick={this.gotoBlog}>Blog</li></a>
+
+                <div className="liSelector"></div>
+
         </div>
-  );
-};
+        </div>
+      </div>
+
+         <MainApp content={ mainContent}/>
+
+       </div>
+    );
+  }
+}
 
 
-export default MainContent;
+var mapStateToProps= function(state){
+   return {
+
+   }
+}
+
+var MainContentContainer= connect(mapStateToProps)(MainContent)
+
+module.exports = MainContentContainer;

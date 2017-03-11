@@ -11,9 +11,9 @@ var Link = router.Link;
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
-import ShopBrowserContainer from './shopbrowser.js'
+import ItemRowContainer from './itemrow.js';
 
-export class Shop extends React.Component {
+export class ShopBrowser extends React.Component {
 
      constructor(props){
          super(props);
@@ -25,9 +25,12 @@ export class Shop extends React.Component {
 
                 <div className="content0">
 
-                  <div className="shop">
-                    <ShopBrowserContainer/>
-                  </div>
+                    <ItemRowContainer/>
+                    <ItemRowContainer/>
+                    <ItemRowContainer/>
+                    <ItemRowContainer/>
+                    <ItemRowContainer/>
+                    <ItemRowContainer/>
                 </div>
      );
    }
@@ -41,6 +44,6 @@ var mapStateToProps=function(state){
 
 }
 
-  var ShopContainer= connect(mapStateToProps)(Shop)
+  var ShopBrowserContainer= connect(mapStateToProps)(ShopBrowser)
 
-export default ShopContainer;
+export default ShopBrowserContainer;

@@ -4,7 +4,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 import {connect} from 'react-redux';
 import MainApp from './mainapp.js'
-var mainContent= <About/>;
+var mainContent= <ShopContainer/>;
 import About from './about.js';
 import ShopContainer from './shop.js';
 import BlogContainer from './blog.js';
@@ -16,6 +16,8 @@ export class MainContent extends React.Component {
          this.gotoAbout= this.gotoAbout.bind(this);
          this.gotoShop= this.gotoShop.bind(this);
          this.gotoBlog= this.gotoBlog.bind(this);
+
+
   }
 
 
@@ -51,8 +53,8 @@ gotoAbout(){
 }
 gotoShop(){
 
-        $('.liSelector').animate({marginLeft:"50px"}, 100 , function(){
-             $('.liSelector').css("margin-left", "50px");
+        $('.liSelector').animate({marginLeft:"70px"}, 100 , function(){
+             $('.liSelector').css("margin-left", "70px");
         });
 
         var dis=this;
@@ -78,9 +80,11 @@ gotoBlog(){
 
     var dis=this;
 
-        $('.liSelector').animate({marginLeft:"100px"},100 , function(){
-             $('.liSelector').css("margin-left", "100px");
+        $('.liSelector').animate({marginLeft:"140px"},100 , function(){
+             $('.liSelector').css("margin-left", "140px");
         });
+
+
 
         $('.content0').animate({left: "-140px" , opacity:"0"}, 200 , function(){
 
@@ -102,7 +106,7 @@ gotoBlog(){
 }
 
   render(){
-
+    
     console.log(this.props);
 
     return (

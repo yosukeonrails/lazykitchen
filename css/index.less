@@ -302,6 +302,7 @@ font-family: 'Just Another Hand', cursive;
     background-image: url('http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/balckandwhitefocus_zpsdtvxt34a.jpg');
     background-size: cover;
     padding-top: 30px;
+    background-attachment: fixed;
   }
 
   .headerv2{
@@ -347,17 +348,17 @@ margin-left: 20px;
         .menu-container{
 
           height: 24px;
-
+          width: 350px;
           .nav-li-container{
 
-            width: 150px;
+            width: 220px;
             .centralize;
 
             .liSelector{
                 background-color: black;
                 height: 5px;
-                width: 50px;
-                margin-left: 0px;
+                margin-left: 70px;
+                width: 70px;
             }
 
               a{text-decoration: none}
@@ -366,12 +367,12 @@ margin-left: 20px;
                 list-style: none;
                 display: inline;
                 font-family:'Alegreya Sans SC', sans-serif;
-                margin-left: 10px;
-                margin-right:10px;
+                margin-left: 20px;
+                margin-right: 20px;
 
                 }
           }
-              width: 220px;
+
               .centralize;
               background-color: white;
         }
@@ -387,19 +388,81 @@ margin-left: 20px;
      background-color: @white;
      min-height: 800px;
    .centralize;
-     width: 75%;
+    width: 100%;
 
    }
-
+   .main-app-container{
+     background-color: #f4f2fc;
+     min-height: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     width: 75%;
+   }
 
 
    .footer{
 
-      background-color: #1a1a1a;
      height: 100px;
      width: 75%;
      .centralize;
+     background-color: #497049;
    }
+   .item-row{
+     width: 90%;
+     .centralize;
+    margin-top: 50px;
+    margin-bottom: 50px;
+   }
+
+.item-div{
+    width: 200px;
+    padding: 0px;
+    .centralize;
+
+.item-info{
+  font-family:@font4;
+  height: 100px;
+  background-color: #f2d59f;
+
+  .item-quantity{
+    .centralize;
+    width: 150px;
+  }
+
+.shopping-cart{
+
+  img{
+     width: 30px;
+    }
+
+}
+ li{
+      text-align: center;
+      list-style: none;
+  }
+
+  .item-price{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+
+  }
+input{
+  .centralize;
+      width: 70px;
+}
+}
+  .item-image{
+    background-image: url(http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/cherry-tomatoes_zpstanw2dai.jpg);
+      width: 100%;
+      height: 150px;
+      background-size: contain;
+  }
+
+
+
+}
+
 
 
 

@@ -82,13 +82,16 @@ app.post('/item', function(req, res){
     name:{eng:req.body.eng,
          cant:req.body.cant,
          mand:req.body.mand},
-    price:{
-      hkd:req.body.hkd,
-      usd:req.body.usd,
-      cny:req.body.cny
+         stnUnit:req.body.stnUnit,
+       stnCurrency:req.body.stnCurrency,
+       pricePerUnit:req.body.pricePerUnit,
+       pictureUrl:req.body.pictureUrl,
+    PricePerStnUnit:{
+      hkd_priceperunit:req.body.hkd_priceperunit,
+      usd_priceperunit:req.body.usd_priceperunit,
+      cny_priceperunit:req.body.cny_priceperunit
     },
-    id:req.body.id,
-    pictureUrl:req.body.pictureUrl
+    id:req.body.id
 };
 
 Item.findOneAndUpdate({ id:req.body.id},{$set:itemData},{upsert:true, new:true},function(err, data){

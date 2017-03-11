@@ -33,7 +33,7 @@ export class Appv2 extends React.Component{
               </div>
 
 
-              <div className="top-nav w3-panel w3-card-12">
+              <div className="top-nav">
 
 
 
@@ -54,7 +54,7 @@ export class Appv2 extends React.Component{
 
               </div>
 
-                        <div className="main-content-container">
+                        <div className="main-app-container">
                           {this.props.children}
                         </div>
               <div className="footer">

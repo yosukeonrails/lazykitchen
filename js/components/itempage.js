@@ -11,7 +11,7 @@ var Link = router.Link;
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
-import ShopBrowserContainer from './shopbrowser.js'
+
 
 export class Shop extends React.Component {
 
@@ -26,7 +26,7 @@ export class Shop extends React.Component {
                 <div className="content0">
 
                   <div className="shop">
-                    <ShopBrowserContainer/>
+                    <h1> Main Shop </h1>
                   </div>
                 </div>
      );

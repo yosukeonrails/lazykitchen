@@ -23,36 +23,54 @@ export class ShopBrowser extends React.Component {
 
 var itemDataArray=veggieData;
 
-var renderedRow=[];
+var rowArray=[];
+var renderedRowArray=[];
 var groupOfThree=[];
+
       var groupRow= function(from , array){
+
          				 if(!array[from]){
-                         renderedRow.push(groupOfThree);
-                         return renderedRow;
+                         rowArray.push(groupOfThree);
+                         return rowArray;
                       }
+
                  if(groupOfThree.length==3){
-                          renderedRow.push(groupOfThree);
+                          rowArray.push(groupOfThree);
                           groupOfThree=[];
                            groupOfThree.push(array[from]);
+
                     }else{
                        groupOfThree.push(array[from]);
                     }
                     groupRow(from+1, array);
-             			return renderedRow;
+
+             			return rowArray;
              } ;
 
-      console.log(groupRow(0, itemDataArray));   
+      var makeRenderedRowArray= function(index, rowArray){
+
+            if(!rowArray[index]){
+              return  renderedRowArray  ;
+            }
+
+
+            renderedRowArray.push(  <ItemRowContainer rowData={ rowArray[index] } />);
+
+              makeRenderedRowArray(index+1 , rowArray);
+
+            return renderedRowArray
+      };
+
+      console.log(groupRow(0, itemDataArray))
+      console.log( makeRenderedRowArray(0 , rowArray))
+
 
      return (
 
                 <div className="content0">
 
-                    <ItemRowContainer/>
-                    <ItemRowContainer/>
-                    <ItemRowContainer/>
-                    <ItemRowContainer/>
-                    <ItemRowContainer/>
-                    <ItemRowContainer/>
+                    {renderedRowArray}
+
                 </div>
      );
    }

@@ -21,15 +21,40 @@ export class ItemRow extends React.Component {
 
     render(){
 
+      var rowData= this.props.rowData;
+  var groupOfThree=[];
+  var rowArray=[];
+      var groupRow= function(from , array){
+
+                  if(!array[from]){
+                         rowArray.push(groupOfThree);
+                         return rowArray;
+                      }
+
+                 if(groupOfThree.length==3){
+                          rowArray.push(groupOfThree);
+                          groupOfThree=[];
+                           groupOfThree.push(   <div className="col-md-4"><ItemContainer itemData={array[from]} /></div>);
+
+                    }else{
+                       groupOfThree.push(  <div className="col-md-4"><ItemContainer itemData={array[from]} /></div>);
+                    }
+                    groupRow(from+1, array);
+
+                   return rowArray;
+             } ;
+
+
+         groupRow(0, rowData);
+              var renderedItemArray=rowArray[0];
+              console.log(renderedItemArray);
      return (
 
                 <div className="item-row">
 
-                        <div className="row">
-                        <div className="col-md-4"><ItemContainer/></div>
-                        <div className="col-md-4"><ItemContainer/></div>
-                        <div className="col-md-4"><ItemContainer/></div>
-                        </div>
+                <div className="row">
+                      {renderedItemArray}
+                </div>
 
                 </div>
      );

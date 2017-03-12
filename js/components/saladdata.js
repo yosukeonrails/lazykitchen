@@ -51,7 +51,7 @@ var veggieData= [
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'133354'
+	id:'1337877354'
 },
 
 {
@@ -69,7 +69,7 @@ var veggieData= [
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'132414'
+	id:'132434414'
 },
 
 {
@@ -88,7 +88,7 @@ var veggieData= [
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'131654364'
+	id:'13155654364'
 },
 
 {
@@ -106,7 +106,7 @@ var veggieData= [
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'1434314'
+	id:'143445314'
 },
 
 {
@@ -124,7 +124,7 @@ var veggieData= [
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'1434314'
+	id:'143455314'
 },
 {
  name:{
@@ -141,7 +141,7 @@ var veggieData= [
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'1343514'
+	id:'134453514'
 },
 
 {
@@ -153,13 +153,13 @@ var veggieData= [
  stnUnit:"catty",
   stnCurrency:"USD",
   pricePerUnit:0.80  ,
-   pictureUrl:"https://www.google.com/imgres?imgurl=https://twistedcheft.files.wordpress.com/2013/07/purple-yam.jpg&imgrefurl=https://twistedcheft.com/2013/07/19/purple-yam-soup/&h=3497&w=3447&tbnid=W_538OAaGWvUfM:&vet=1&tbnh=186&tbnw=183&docid=-HqjP6n8R1y05M&itg=1&usg=__0rtmSmciENjnKFObZqRgwMM_r50=&sa=X&ved=0ahUKEwjNz_eWqs_SAhUJ52MKHdNgBScQ_B0IejAK&ei=NmPEWM3cHInOjwPTwZW4Ag#h=3497&imgrc=W_538OAaGWvUfM:&tbnh=186&tbnw=183&vet=1&w=3447" ,
+   pictureUrl:"https://paleoleap.com/wp-content/uploads/2013/12/japanese-sweet-potatoes.jpg" ,
   PricePerStnUnit:{
       usd_priceperunit:0,
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'131535'
+	id:'131866535'
 },
 
 {
@@ -171,13 +171,13 @@ var veggieData= [
  stnUnit:"catty",
   stnCurrency:"USD",
   pricePerUnit:0.80  ,
-   pictureUrl:"https://www.google.com/imgres?imgurl=https://twistedcheft.files.wordpress.com/2013/07/purple-yam.jpg&imgrefurl=https://twistedcheft.com/2013/07/19/purple-yam-soup/&h=3497&w=3447&tbnid=W_538OAaGWvUfM:&vet=1&tbnh=186&tbnw=183&docid=-HqjP6n8R1y05M&itg=1&usg=__0rtmSmciENjnKFObZqRgwMM_r50=&sa=X&ved=0ahUKEwjNz_eWqs_SAhUJ52MKHdNgBScQ_B0IejAK&ei=NmPEWM3cHInOjwPTwZW4Ag#h=3497&imgrc=W_538OAaGWvUfM:&tbnh=186&tbnw=183&vet=1&w=3447" ,
+   pictureUrl:"https://paleoleap.com/wp-content/uploads/2013/12/japanese-sweet-potatoes.jpg" ,
   PricePerStnUnit:{
       usd_priceperunit:0,
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'131535'
+	id:'14431535'
 },
 
 {
@@ -189,13 +189,13 @@ var veggieData= [
  stnUnit:"catty",
   stnCurrency:"USD",
   pricePerUnit:0.80  ,
-   pictureUrl:"https://www.google.com/imgres?imgurl=https://twistedcheft.files.wordpress.com/2013/07/purple-yam.jpg&imgrefurl=https://twistedcheft.com/2013/07/19/purple-yam-soup/&h=3497&w=3447&tbnid=W_538OAaGWvUfM:&vet=1&tbnh=186&tbnw=183&docid=-HqjP6n8R1y05M&itg=1&usg=__0rtmSmciENjnKFObZqRgwMM_r50=&sa=X&ved=0ahUKEwjNz_eWqs_SAhUJ52MKHdNgBScQ_B0IejAK&ei=NmPEWM3cHInOjwPTwZW4Ag#h=3497&imgrc=W_538OAaGWvUfM:&tbnh=186&tbnw=183&vet=1&w=3447" ,
+   pictureUrl:"https://paleoleap.com/wp-content/uploads/2013/12/japanese-sweet-potatoes.jpg" ,
   PricePerStnUnit:{
       usd_priceperunit:0,
       hkd_priceperunit:0,
       cny_priceperunit:0
   },
-	id:'131535'
+	id:'1155435'
 }
 
 ];

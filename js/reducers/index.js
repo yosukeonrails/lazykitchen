@@ -1,13 +1,6 @@
-var actions = require('../actions/index');
-import {handle} from 'redux-pack';
+import { combineReducers } from 'redux'
+import shopping from './shopping.js'
 
-var stateDefault = {
-
-};
-
-var reducer = function(state, action) {
-
-      state = state || stateDefault;
-};
-
-export default reducer;
+export default combineReducers({
+  shopping
+});

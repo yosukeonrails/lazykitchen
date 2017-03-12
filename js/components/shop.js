@@ -24,7 +24,7 @@ export class Shop extends React.Component {
      return (
 
                 <div className="content0">
-
+              
                   <div className="shop">
                     <ShopBrowserContainer/>
                   </div>

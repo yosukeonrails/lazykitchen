@@ -36,7 +36,7 @@ var groupOfThree=[];
                          return rowArray;
                       }
 
-                        array[from].orderIndex = from
+                        array[from].orderIndex = from;
 
 
 

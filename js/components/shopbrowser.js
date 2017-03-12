@@ -29,19 +29,27 @@ var groupOfThree=[];
 
       var groupRow= function(from , array){
 
+
+
          				 if(!array[from]){
                          rowArray.push(groupOfThree);
                          return rowArray;
                       }
 
+                        array[from].orderIndex = from
+
+
+
                  if(groupOfThree.length==3){
                           rowArray.push(groupOfThree);
+
                           groupOfThree=[];
                            groupOfThree.push(array[from]);
 
                     }else{
                        groupOfThree.push(array[from]);
                     }
+
                     groupRow(from+1, array);
 
              			return rowArray;

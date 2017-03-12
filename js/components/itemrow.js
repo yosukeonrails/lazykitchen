@@ -34,7 +34,7 @@ export class ItemRow extends React.Component {
                  if(groupOfThree.length==3){
                           rowArray.push(groupOfThree);
                           groupOfThree=[];
-                           groupOfThree.push(   <div className="col-md-4"><ItemContainer itemData={array[from]} /></div>);
+                           groupOfThree.push( <div className="col-md-4"><ItemContainer itemData={array[from]} /></div>);
 
                     }else{
                        groupOfThree.push(  <div className="col-md-4"><ItemContainer itemData={array[from]} /></div>);

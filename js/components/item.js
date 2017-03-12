@@ -7,7 +7,7 @@ var router = require('react-router');
 var Router = router.Router;
 var Route = router.Route;
 var Link = router.Link;
-
+var visibility;
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
@@ -17,18 +17,39 @@ export class Item extends React.Component {
 
      constructor(props){
          super(props);
+
+
+
      }
 
      render(){
 
        var picture;
         console.log(this.props.itemData);
+      var id='#'+this.props.itemData.id;
+      console.log(this.props.itemData.id)
+        function show(){
+
+             $(id).animate({
+                opacity:'1'
+             });
+
+        }
+
+          function fadein(orderIndex){
+                var time= orderIndex*100;
+                console.log(time);
+              setTimeout( show, time );
+          }
+
+          fadein(this.props.itemData.orderIndex);
+
 
      return (
 
 
 
-                <div style={{padding:'0px'}} className="item-div w3-panel w3-card-8">
+                <div style={{padding:'0px' }} id={this.props.itemData.id} className="item-div w3-panel w3-card-8">
 
                     <div  style={{backgroundImage:'url('+this.props.itemData.pictureUrl+')'}}className="item-image"></div>
                       <div className="item-info">

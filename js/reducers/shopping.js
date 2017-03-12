@@ -1,9 +1,9 @@
 import {handle} from 'redux-pack';
-import {ADD_TO_SHOPPING_CART} from '../actions/index.js'
+import {ADD_TO_SHOPPING_CART, UPDATE_CART_LENGTH} from '../actions/index.js'
 
 var stateDefault = {
 
-    cartArray: []
+    cartArray:[]
 };
 
 export default function shopping(state, action) {
@@ -16,6 +16,12 @@ export default function shopping(state, action) {
         state.cartArray= action.cartArray
 
         break;
+
+        case UPDATE_CART_LENGTH:
+
+            state.cartLength= action.cartLength
+
+            break;
 
       }
   return {...state}

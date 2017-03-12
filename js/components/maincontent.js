@@ -106,8 +106,7 @@ gotoBlog(){
 }
 
   render(){
-    
-    console.log(this.props);
+
 
     return (
       <div>
@@ -120,7 +119,7 @@ gotoBlog(){
         <a><li onClick={this.gotoShop}>Shop</li></a>
           <a><li onClick={this.gotoBlog}>Blog</li></a>
 
-                <div className="liSelector"></div>
+        <div className="liSelector"></div>
 
         </div>
         </div>

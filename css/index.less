@@ -133,6 +133,56 @@ h1{
   padding-top: 30px;
   height: 250px;
 }
+.shopping-cart-button{
+
+  font-size: 30px;
+  right: 0;
+  color: #2d633b;
+  text-align: center;
+  top: 0;
+  margin: 15px;
+
+  i{
+    border: 2px solid #2f2f2f;
+      padding-top: 6px;
+      padding-right: 7px;
+      padding-left: 5px;
+      padding-bottom: 3px;
+      width: 45px;
+      height: 45px;
+      opacity: .9;
+      border-radius: 50%;
+  }
+}
+.shopping-cart-number{
+  width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  bottom: 30px;
+  padding-right: 54px;
+  color: #d9534f;
+  font-size: 22px;
+}
+
+.shopping-tray{
+  height: 100%;
+width: 0px;
+position: fixed;
+z-index: 1;
+bottom: 0;
+right: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+color:white;
+
+i{
+margin-top: 40px;
+font-size: 25px;
+padding-left: 20px;
+}
+}
 
 .header:after {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url( 'http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/anne-preble-198119_zpsx8w1yxuv.jpg ') ;
@@ -421,7 +471,6 @@ margin-left: 20px;
    .item-row{
      width: 90%;
      .centralize;
-    margin-top: 50px;
     margin-bottom: 50px;
    }
 
@@ -467,7 +516,8 @@ input{
     background-image: url(http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/cherry-tomatoes_zpstanw2dai.jpg);
       width: 100%;
       height: 150px;
-      background-size: contain;
+      background-size: cover;
+background-repeat: no-repeat;
   }
 
 

@@ -13,3 +13,14 @@ export var addToShoppingCart= function(cartArray){
       };
 
 };
+
+export var UPDATE_CART_LENGTH='UPDATE_CART_LENGTH';
+
+export var updateCartLength= function(cartLength){
+
+      return{
+        type:UPDATE_CART_LENGTH,
+        cartLength:cartLength
+      };
+
+};

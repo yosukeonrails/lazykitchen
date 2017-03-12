@@ -11,7 +11,7 @@ var Link = router.Link;
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
-import ItemContainer from './item.js'
+import ItemContainer from './item.js';
 
 export class ItemRow extends React.Component {
 

@@ -11,7 +11,25 @@ var visibility;
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
-import {addToShoppingCart} from '../actions/index.js'
+import {addToShoppingCart , updateCartLength} from '../actions/index.js';
+
+
+var findOneAndUpdate= function( index, newCartArray, addedItemData){
+
+          if(!newCartArray[index]){
+            console.log('could not find , adding item');
+                newCartArray.push(addedItemData);
+            return;
+          }
+
+          if(newCartArray[index].info.id === addedItemData.info.id){
+                newCartArray[index] = addedItemData;
+            return;
+          }
+
+          return findOneAndUpdate(index+1 , newCartArray , addedItemData);
+
+};
 
 export class Item extends React.Component {
 
@@ -32,36 +50,27 @@ export class Item extends React.Component {
      }
 
      addToCart(){
+        this.setState({random:'random'});
 
-        var findSameAndUpdate= function(cartArray , itemData){
-            console.log(itemData);
-            if(cartArray[itemData.cartArrayIndex].id === itemData.id){
-
-                  cartArray[itemData.cartArrayIndex] = itemData;
-               console.log('UPDATED ONE');
-            }
-
-        };
-        var cartArray= this.props.cartArray;
-
-         if( !this.state.itemQuantity){
-
-           return;
-         }
-
-        if(this.props.itemData.cartArrayIndex <= 0){
-
-            this.props.itemData.quantity= this.state.itemQuantity;
-              findSameAndUpdate(cartArray , this.props.itemData);
-               this.props.dispatch(addToShoppingCart(cartArray));
-              return;
+        if(!this.state.itemQuantity){
+          console.log('nothing to add');
         }
 
-            this.props.itemData.cartArrayIndex= this.props.cartArray.length;
-            this.props.itemData.quantity= this.state.itemQuantity;
-            cartArray.push(this.props.itemData);
-            this.props.dispatch(addToShoppingCart(cartArray));
+          var newCartArray= this.props.cartArray;
+
+          var addedItemData= {
+            info:this.props.itemData,
+            quantity:this.state.itemQuantity
+          };
+
+          findOneAndUpdate( 0 , newCartArray , addedItemData);
+
+            var cartLength= newCartArray.length;
+            this.props.dispatch(addToShoppingCart(newCartArray));
+            this.props.dispatch(updateCartLength(cartLength));
+            console.log('added');
             return;
+
      }
 
      render(){
@@ -101,7 +110,6 @@ export class Item extends React.Component {
 
                               <span>{this.props.itemData.stnUnit} </span></div>
                               <div className="item-quantity"><input onChange={this.setQuantity} type="number"></input> lb
-
                               <span  onClick={this.addToCart} className="shopping-cart">
                               <img src="http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/1489142454_meanicons_59_zpsiacry9ga.png">
                               </img>
@@ -116,7 +124,6 @@ export class Item extends React.Component {
 }
 
 var mapStateToProps=function(state){
-
    return {
      cartArray: state.shopping.cartArray
    }

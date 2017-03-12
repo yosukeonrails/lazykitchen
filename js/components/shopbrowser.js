@@ -12,17 +12,37 @@ import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
 import ItemRowContainer from './itemrow.js';
-
+import CartTrayContainer from './carttray.js';
 export class ShopBrowser extends React.Component {
 
      constructor(props){
          super(props);
+
+         this.showCart= this.showCart.bind(this);
+         this.closeCart= this.closeCart.bind(this);
+     }
+
+     componentDidMount(){
+      console.log('UPDATED tje component');
+     }
+
+     showCart(){
+       console.log('showing cart');
+
+       $('.shopping-tray').css("width", "300px");
+
+     }
+
+     closeCart(){
+       console.log('showing cart');
+
+       $('.shopping-tray').css("width", "0px");
+
      }
 
     render(){
 
 var itemDataArray=veggieData;
-
 var rowArray=[];
 var renderedRowArray=[];
 var groupOfThree=[];
@@ -69,14 +89,17 @@ var groupOfThree=[];
             return renderedRowArray
       };
 
-      console.log(groupRow(0, itemDataArray))
-      console.log( makeRenderedRowArray(0 , rowArray))
+groupRow(0, itemDataArray)
+    makeRenderedRowArray(0 , rowArray)
 
 
      return (
 
                 <div className="content0">
 
+                    <div className="shopping-cart-button" onClick={this.showCart}><i className="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                    <div className="shopping-tray" onClick={this.closeCart}><i className="fa fa-times" aria-hidden="true"></i>  </div>
+                     <div className= "shopping-cart-number">{this.props.cartLength}</div>
                     {renderedRowArray}
 
                 </div>
@@ -85,9 +108,9 @@ var groupOfThree=[];
 }
 
 var mapStateToProps=function(state){
-
+        console.log(state);
    return {
-
+          cartLength:state.shopping.cartLength
    }
 
 }

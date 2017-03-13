@@ -23,7 +23,17 @@ var findOneAndUpdate= function( index, newCartArray, addedItemData){
           }
 
           if(newCartArray[index].info.id === addedItemData.info.id){
-                newCartArray[index] = addedItemData;
+
+             newCartArray[index] = addedItemData;
+                var cartCopy= newCartArray;
+                newCartArray=[];
+
+                for(var i=0; cartCopy.length; i++){
+                  newCartArray.push(cartCopy[i]);
+                  return;
+
+                }
+
             return;
           }
 

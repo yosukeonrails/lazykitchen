@@ -12,7 +12,7 @@ import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
 import ItemRowContainer from './itemrow.js';
-import CartTrayContainer from './carttray.js';
+import TrayItemContainer from './trayitem.js';
 export class ShopBrowser extends React.Component {
 
      constructor(props){
@@ -28,14 +28,14 @@ export class ShopBrowser extends React.Component {
 
      showCart(){
        console.log('showing cart');
-
+      $('.appv2').css("right", "130px");
        $('.shopping-tray').css("width", "300px");
 
      }
 
      closeCart(){
        console.log('showing cart');
-
+  $('.appv2').css("right", "0px");
        $('.shopping-tray').css("width", "0px");
 
      }
@@ -46,6 +46,17 @@ var itemDataArray=veggieData;
 var rowArray=[];
 var renderedRowArray=[];
 var groupOfThree=[];
+var trayItemArray=[];
+
+console.log('BEFORE');
+
+  if(this.props.cartArray.length > 0 ){
+    console.log(this.props.cartArray);
+      for(var i=0; i<this.props.cartArray.length; i++ ){
+          trayItemArray.push(<TrayItemContainer index={i} />)
+      }
+
+  }
 
       var groupRow= function(from , array){
 
@@ -98,7 +109,13 @@ groupRow(0, itemDataArray)
                 <div className="content0">
 
                     <div className="shopping-cart-button" onClick={this.showCart}><i className="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                    <div className="shopping-tray" onClick={this.closeCart}><i className="fa fa-times" aria-hidden="true"></i>  </div>
+                    <div className="shopping-tray" onClick={this.closeCart}>  <i className="fa fa-times" aria-hidden="true"></i>
+                      <div className= "shopping-cart-number">{this.props.cartLength}</div>
+                    <div className="shopping-tray-item-container">
+
+                    {trayItemArray}
+                    </div>
+                     </div>
                      <div className= "shopping-cart-number">{this.props.cartLength}</div>
                     {renderedRowArray}
 
@@ -110,7 +127,8 @@ groupRow(0, itemDataArray)
 var mapStateToProps=function(state){
         console.log(state);
    return {
-          cartLength:state.shopping.cartLength
+          cartLength:state.shopping.cartLength,
+          cartArray:state.shopping.cartArray
    }
 
 }

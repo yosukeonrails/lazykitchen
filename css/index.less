@@ -165,24 +165,6 @@ h1{
   font-size: 22px;
 }
 
-.shopping-tray{
-  height: 100%;
-width: 0px;
-position: fixed;
-z-index: 1;
-bottom: 0;
-right: 0;
-background-color: #111;
-overflow-x: hidden;
-transition: 0.5s;
-color:white;
-
-i{
-margin-top: 40px;
-font-size: 25px;
-padding-left: 20px;
-}
-}
 
 .header:after {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url( 'http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/anne-preble-198119_zpsx8w1yxuv.jpg ') ;
@@ -363,6 +345,8 @@ font-family: 'Just Another Hand', cursive;
     background-size: cover;
     padding-top: 30px;
     background-attachment: fixed;
+    position: relative;
+       transition: 0.5s;
   }
 
   .headerv2{
@@ -461,6 +445,38 @@ margin-left: 20px;
    }
 
 
+   .shopping-tray{
+
+     height: 100%;
+   width: 0px;
+   position: fixed;
+   z-index: 1;
+   bottom: 0;
+   right: 0;
+   background-color:@black;
+   overflow-x: hidden;
+   transition: 0.5s;
+   color:white;
+    box-shadow: 1px 3px 10px 0px black;
+
+
+  .tray-item{
+    width: 150px;
+    height: 300px;
+    padding: 0;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    }
+   i{
+   margin-top: 40px;
+   font-size: 25px;
+   padding-left: 20px;
+   }
+   }
+
+
    .footer{
 
      height: 100px;
@@ -474,54 +490,53 @@ margin-left: 20px;
     margin-bottom: 50px;
    }
 
+   .item-info{
+     font-family:@font4;
+     height: 100px;
+     background-color: #f2d59f;
+
+     .item-quantity{
+       .centralize;
+       width: 150px;
+     }
+
+   .shopping-cart{
+
+     img{
+        width: 30px;
+       }
+
+   }
+    li{
+         text-align: center;
+         list-style: none;
+     }
+
+     .item-price{
+       margin-left: auto;
+       margin-right: auto;
+       width: 70px;
+
+     }
+   input{
+     .centralize;
+         width: 70px;
+   }
+   }
+
+   .item-image{
+     background-image: url(http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/cherry-tomatoes_zpstanw2dai.jpg);
+       width: 100%;
+       height: 150px;
+       background-size: cover;
+ background-repeat: no-repeat;
+   }
+
 .item-div{
     width: 200px;
     padding: 0px;
     .centralize;
     opacity: 0;
-.item-info{
-  font-family:@font4;
-  height: 100px;
-  background-color: #f2d59f;
-
-  .item-quantity{
-    .centralize;
-    width: 150px;
-  }
-
-.shopping-cart{
-
-  img{
-     width: 30px;
-    }
-
-}
- li{
-      text-align: center;
-      list-style: none;
-  }
-
-  .item-price{
-    margin-left: auto;
-    margin-right: auto;
-    width: 70px;
-
-  }
-input{
-  .centralize;
-      width: 70px;
-}
-}
-  .item-image{
-    background-image: url(http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/cherry-tomatoes_zpstanw2dai.jpg);
-      width: 100%;
-      height: 150px;
-      background-size: cover;
-background-repeat: no-repeat;
-  }
-
-
-
 }
 
 

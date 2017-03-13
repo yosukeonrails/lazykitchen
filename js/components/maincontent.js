@@ -26,6 +26,8 @@ gotoAbout(){
 
     var dis=this;
 
+       $('.shopping-tray').css("width", "0px");
+       $('.appv2').css("right", "0px");
         $('.liSelector').animate({marginLeft:"0px"}, 100 , function(){
              $('.liSelector').css("margin-left", "0px");
         });
@@ -52,6 +54,10 @@ gotoAbout(){
 
 }
 gotoShop(){
+
+
+     $('.shopping-tray').css("width", "0px");
+    $('.appv2').css("right", "0px");
 
         $('.liSelector').animate({marginLeft:"70px"}, 100 , function(){
              $('.liSelector').css("margin-left", "70px");
@@ -80,6 +86,8 @@ gotoBlog(){
 
     var dis=this;
 
+       $('.shopping-tray').css("width", "0px");
+   $('.appv2').css("right", "0px");
         $('.liSelector').animate({marginLeft:"140px"},100 , function(){
              $('.liSelector').css("margin-left", "140px");
         });

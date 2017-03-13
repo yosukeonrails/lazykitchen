@@ -24,39 +24,51 @@ export class Appv2 extends React.Component{
   render () {
 
 
+    var cartTotal=0;
+    console.log('BEFORE');
+
+      if(this.props.cartArray.length > 0 ){
+        console.log(this.props.cartArray);
+          for(var i=0; i<this.props.cartArray.length; i++ ){
+
+              cartTotal=Math.round((cartTotal+this.props.cartArray[i].itemTotal) * 100) / 100 ;
+          }
+
+      }
+
     return(
 
       <div className='appv2'>
 
               <div className="headerv2">
               <h1>Lazy Kitchen</h1>
+               <div className="check-out"><span>total: </span><span><b>{cartTotal} </b></span>$<span>USD</span> <i className="fa fa-shopping-cart" aria-hidden="true"></i> checkout ( {this.props.cartLength} )</div>
               </div>
 
+            <div className="app-container">
+                  <div className="top-nav">
 
-              <div className="top-nav">
+                          <div className="logo-container">
 
+                            <div className="circle">
+                              <div className="circle1">
+                                <div className="circle2">
 
+                                <p>Lazy Kitchen</p>
+                                <h4>懶人廚房</h4>
 
-              <div className="logo-container">
+                                </div>
+                              </div>
+                            </div>
 
-                    <div className="circle">
-                      <div className="circle1">
-                        <div className="circle2">
+                          </div>
 
-                            <p>Lazy Kitchen</p>
-                            <h4>懶人廚房</h4>
+                  </div>
 
-                        </div>
-                      </div>
-                    </div>
-
-              </div>
-
-              </div>
-
-                        <div className="main-app-container">
-                          {this.props.children}
-                        </div>
+                  <div className="main-app-container">
+                  {this.props.children}
+                  </div>
+          </div>
               <div className="footer">
 
               </div>
@@ -69,7 +81,8 @@ export class Appv2 extends React.Component{
 
 var mapStateToProps= function(state){
    return {
-
+     cartLength:state.shopping.cartLength,
+     cartArray:state.shopping.cartArray
    }
 }
 

@@ -27,7 +27,7 @@ export class TrayItem extends React.Component {
         var cartArray= this.props.cartArray[this.props.index];
 
         console.log(this.props.cartArray[this.props.index].quantity);
-
+console.log(this.props.cartArray[this.props.index].itemTotal);
 
      return (
 
@@ -36,12 +36,13 @@ export class TrayItem extends React.Component {
                   <div className="item-info">
 
                         <li className="item-name"><b>{cartArray.info.name.eng}</b></li>
-                        <div  className="item-price"><span><b>{cartArray.info.pricePerUnit}</b></span><span> ${cartArray.info.stnCurrency}</span>
 
-                          <span> per {cartArray.info.stnUnit} </span></div>
-                          <div className="item-tray-quantity"><span><b>{this.props.cartArray[this.props.index].quantity}</b></span> lb
+
+                        <div className="item-tray-quantity"><span><b>{this.props.cartArray[this.props.index].quantity}</b>  </span> {this.props.cartArray[this.props.index].stnUnit} X
+                        <span><b> {cartArray.info.pricePerUnit}</b></span>
+                        <span> ${cartArray.info.stnCurrency}</span>
                         </div>
-
+                            <div className="item-total"><b>total: </b><b>{this.props.cartArray[this.props.index].itemTotal}</b> $<span>{cartArray.info.stnCurrency}</span></div>
                   </div>
                 </div>
      );

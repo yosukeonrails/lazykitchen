@@ -47,17 +47,22 @@ var rowArray=[];
 var renderedRowArray=[];
 var groupOfThree=[];
 var trayItemArray=[];
-
+var cartTotal=0;
 console.log('BEFORE');
 
   if(this.props.cartArray.length > 0 ){
     console.log(this.props.cartArray);
       for(var i=0; i<this.props.cartArray.length; i++ ){
+
+          cartTotal=Math.round((cartTotal+this.props.cartArray[i].itemTotal) * 100) / 100 ;
+
           trayItemArray.push(<TrayItemContainer  index={i} />)
       }
 
   }
 
+
+  console.log(cartTotal);
       var groupRow= function(from , array){
 
 
@@ -114,11 +119,12 @@ groupRow(0, itemDataArray)
                     <div className="shopping-tray-item-container">
 
                     {trayItemArray}
+                    <div className="shop-total"> <span>total: </span><span><b>{cartTotal} </b></span>$<span>USD</span> <div className="tray-checkout"> checkout ( {this.props.cartLength} )<span></span></div></div>
                     </div>
                      </div>
                      <div className= "shopping-cart-number">{this.props.cartLength}</div>
                     {renderedRowArray}
-                    <div className="shop-total"> <span>total:</span> <span></span></div>
+
                 </div>
      );
    }

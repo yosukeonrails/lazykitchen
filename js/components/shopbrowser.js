@@ -35,7 +35,7 @@ export class ShopBrowser extends React.Component {
 
      closeCart(){
        console.log('showing cart');
-  $('.appv2').css("right", "0px");
+       $('.appv2').css("right", "0px");
        $('.shopping-tray').css("width", "0px");
 
      }
@@ -53,7 +53,7 @@ console.log('BEFORE');
   if(this.props.cartArray.length > 0 ){
     console.log(this.props.cartArray);
       for(var i=0; i<this.props.cartArray.length; i++ ){
-          trayItemArray.push(<TrayItemContainer index={i} />)
+          trayItemArray.push(<TrayItemContainer  index={i} />)
       }
 
   }
@@ -118,7 +118,7 @@ groupRow(0, itemDataArray)
                      </div>
                      <div className= "shopping-cart-number">{this.props.cartLength}</div>
                     {renderedRowArray}
-
+                    <div className="shop-total"> <span>total:</span> <span></span></div>
                 </div>
      );
    }

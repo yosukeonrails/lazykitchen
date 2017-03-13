@@ -115,10 +115,10 @@ export class Item extends React.Component {
                     <div  style={{backgroundImage:'url('+this.props.itemData.pictureUrl+')'}}className="item-image"></div>
                       <div className="item-info">
 
-                            <li className="item-name">{this.props.itemData.name.eng}</li>
-                            <div  className="item-price"><span>{this.props.itemData.pricePerUnit}</span><span>{this.props.itemData.stnCurrency}</span>
+                            <li className="item-name"><b>{this.props.itemData.name.eng}</b></li>
+          <div  className="item-price"><span className="price"><b>{this.props.itemData.pricePerUnit}</b></span><span> ${this.props.itemData.stnCurrency} </span><span> per {this.props.itemData.stnUnit} </span></div>
 
-                              <span>{this.props.itemData.stnUnit} </span></div>
+
                               <div className="item-quantity"><input onChange={this.setQuantity} type="number"></input> lb
                               <span  onClick={this.addToCart} className="shopping-cart">
                               <img src="http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/1489142454_meanicons_59_zpsiacry9ga.png">

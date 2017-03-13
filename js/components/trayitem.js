@@ -26,7 +26,7 @@ export class TrayItem extends React.Component {
 
         var cartArray= this.props.cartArray[this.props.index];
 
-        console.log(cartArray);
+        console.log(this.props.cartArray[this.props.index].quantity);
 
 
      return (
@@ -35,11 +35,11 @@ export class TrayItem extends React.Component {
                 <div  style={{backgroundImage:'url('+cartArray.info.pictureUrl+')'}} className="item-image"></div>
                   <div className="item-info">
 
-                        <li className="item-name">{cartArray.info.name.eng}</li>
-                        <div  className="item-price"><span>{cartArray.info.pricePerUnit}</span><span>{cartArray.info.stnCurrency}</span>
+                        <li className="item-name"><b>{cartArray.info.name.eng}</b></li>
+                        <div  className="item-price"><span><b>{cartArray.info.pricePerUnit}</b></span><span> ${cartArray.info.stnCurrency}</span>
 
-                          <span>{cartArray.info.stnUnit} </span></div>
-                          <div className="item-quantity"><span>{this.props.cartArray[this.props.index].quantity}</span> lb
+                          <span> per {cartArray.info.stnUnit} </span></div>
+                          <div className="item-tray-quantity"><span><b>{this.props.cartArray[this.props.index].quantity}</b></span> lb
                         </div>
 
                   </div>
@@ -50,6 +50,7 @@ export class TrayItem extends React.Component {
 
 var mapStateToProps=function(state){
    return {
+       cartLength:state.shopping.cartLength,
      cartArray: state.shopping.cartArray
    }
 

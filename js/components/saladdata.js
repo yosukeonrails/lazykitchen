@@ -75,7 +75,7 @@ var veggieData= [
 {
  name:{
 
-       eng:"Flowering Cabbage (Choi Sum)",
+       eng:"Flowering Cabbage",
 	cant:"",
 	 mand:"",
 		},

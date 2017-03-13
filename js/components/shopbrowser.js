@@ -114,7 +114,7 @@ groupRow(0, itemDataArray)
                 <div className="content0">
 
                     <div className="shopping-cart-button" onClick={this.showCart}><i className="fa fa-shopping-cart" aria-hidden="true"></i></div>
-                    <div className="shopping-tray" onClick={this.closeCart}>  <i className="fa fa-times" aria-hidden="true"></i>
+                    <div className="shopping-tray" >  <i onClick={this.closeCart} className="fa fa-times" aria-hidden="true"></i>
                       <div className= "shopping-cart-number">{this.props.cartLength}</div>
                     <div className="shopping-tray-item-container">
 

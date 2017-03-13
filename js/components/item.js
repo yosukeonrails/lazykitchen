@@ -71,7 +71,8 @@ export class Item extends React.Component {
           var addedItemData= {
             info:this.props.itemData,
             quantity:this.state.itemQuantity,
-            itemTotal:Math.round((this.state.itemQuantity * this.props.itemData.pricePerUnit) * 100) / 100
+            itemTotal:Math.round((this.state.itemQuantity * this.props.itemData.pricePerUnit) * 100) / 100,
+
           };
 
           findOneAndUpdate( 0 , newCartArray , addedItemData);

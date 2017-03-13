@@ -12,27 +12,33 @@ import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
 
+var findOneAndDelete= function(cartArray, index, itemIndex){
 
+};
 
 export class TrayItem extends React.Component {
 
      constructor(props){
          super(props);
-
+         this.deleteOne= this.deleteOne.bind(this);
      }
 
-
+     deleteOne(){
+        console.log(this.props.index);
+     }
      render(){
 
         var cartArray= this.props.cartArray[this.props.index];
-
+        var index= this.props.index;
         console.log(this.props.cartArray[this.props.index].quantity);
 console.log(this.props.cartArray[this.props.index].itemTotal);
 
      return (
 
                 <div  className="tray-item">
+                  <i className="material-icons cross" onClick={this.deleteOne}>close</i>
                 <div  style={{backgroundImage:'url('+cartArray.info.pictureUrl+')'}} className="item-image"></div>
+
                   <div className="item-info">
 
                         <li className="item-name"><b>{cartArray.info.name.eng}</b></li>

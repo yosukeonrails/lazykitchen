@@ -11,8 +11,18 @@ var visibility;
 import {connect} from 'react-redux';
 import {push} from 'react-router-redux';
 import {hashHistory} from 'react-router';
+import {addToShoppingCart,updateCartLength} from '../actions/index.js';
+var findOneAndDelete= function(cartArray, index, itemIndex, arrayAfterDelete){
 
-var findOneAndDelete= function(cartArray, index, itemIndex){
+    if(!cartArray[index]){
+        return arrayAfterDelete;
+    }
+
+    if(index!==itemIndex){
+      arrayAfterDelete.push(cartArray[index]);
+    }
+
+   return  findOneAndDelete(cartArray, index+1 , itemIndex, arrayAfterDelete);
 
 };
 
@@ -24,7 +34,14 @@ export class TrayItem extends React.Component {
      }
 
      deleteOne(){
-        console.log(this.props.index);
+      var arrayAfterDelete=[];
+
+       findOneAndDelete(this.props.cartArray , 0 , this.props.index, arrayAfterDelete );
+
+
+       var cartLength= arrayAfterDelete.length;
+       this.props.dispatch(addToShoppingCart(arrayAfterDelete));
+       this.props.dispatch(updateCartLength(cartLength));
      }
      render(){
 

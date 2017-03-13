@@ -11,6 +11,7 @@ require('babel-polyfill');
   import MainContent from './components/maincontent.js';
   import Appv2Container from './components/appv2.js';
  import BrowserContainer from './components/browser.js';
+ import CheckOutContainer from './components/checkout.js';
   import { Provider } from 'react-redux';
   import store from './store';
   console.log('react is working')
@@ -21,7 +22,7 @@ require('babel-polyfill');
 
              <IndexRoute component={MainContent} />
                <Route path="/browser" component={BrowserContainer} />
-
+                      <Route path="/checkout" component={CheckOutContainer} />
 
              </Route>
      </Router>

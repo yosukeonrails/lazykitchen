@@ -119,7 +119,11 @@ groupRow(0, itemDataArray)
                     <div className="shopping-tray-item-container">
 
                     {trayItemArray}
-                    <div className="shop-total"> <span>total: </span><span><b>{cartTotal} </b></span>$<span>USD</span> <div className="tray-checkout"> checkout ( {this.props.cartLength} )<span></span></div></div>
+                    <div className="shop-total"> <span>total: </span><span><b>{cartTotal} </b></span>$<span>USD</span>
+
+                    <Link to='/checkout'><div className="tray-checkout"> checkout ( {this.props.cartLength} )<span></span></div></Link>
+                    </div>
+
                     </div>
                      </div>
                      <div className= "shopping-cart-number">{this.props.cartLength}</div>

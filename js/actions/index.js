@@ -25,3 +25,16 @@ export var updateCartLength= function(cartLength){
       };
 
 };
+
+
+
+export var SUBMIT_ORDER_INFO='SUBMIT_ORDER_INFO';
+
+export var submitOrderInfo= function(orderInfo){
+
+      return{
+        type:SUBMIT_ORDER_INFO,
+        orderInfo:orderInfo
+      };
+
+};

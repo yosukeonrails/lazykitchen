@@ -1,7 +1,12 @@
-var React = require('react');
+
 import {connect} from 'react-redux';
 
-
+var React = require('react');
+var ReactDOM = require('react-dom');
+var router = require('react-router');
+var Router = router.Router;
+var Route = router.Route;
+var Link = router.Link;
 
 export class Appv2 extends React.Component{
 
@@ -42,7 +47,7 @@ export class Appv2 extends React.Component{
 
               <div className="headerv2">
               <h1>Lazy Kitchen</h1>
-               <div className="check-out"><span>total: </span><span><b>{cartTotal} </b></span>$<span>USD</span> <i className="fa fa-shopping-cart" aria-hidden="true"></i> checkout ( {this.props.cartLength} )</div>
+            <Link to='/checkout'>   <div className="check-out"><span>total: </span><span><b>{cartTotal} </b></span>$<span>USD</span> <i className="fa fa-shopping-cart" aria-hidden="true"></i> checkout ( {this.props.cartLength} )</div></Link>
               </div>
 
             <div className="app-container">

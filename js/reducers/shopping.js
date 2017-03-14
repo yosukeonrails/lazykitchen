@@ -1,5 +1,5 @@
 import {handle} from 'redux-pack';
-import {ADD_TO_SHOPPING_CART, UPDATE_CART_LENGTH, CREATE_DIALOG} from '../actions/index.js';
+import {ADD_TO_SHOPPING_CART, UPDATE_CART_LENGTH, CREATE_DIALOG,SUBMIT_ORDER_INFO} from '../actions/index.js';
 
 
 var stateDefault = {
@@ -13,7 +13,7 @@ export default function shopping(state, action) {
       switch (action.type) {
 
 
-  
+
     case ADD_TO_SHOPPING_CART:
 
         state={
@@ -28,6 +28,11 @@ export default function shopping(state, action) {
 
             break;
 
+  case SUBMIT_ORDER_INFO:
+
+      state.orderInfo= action.orderInfo;
+
+      break;
       }
 
   return {...state}

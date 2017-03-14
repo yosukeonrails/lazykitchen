@@ -132,13 +132,12 @@ var inputType="";
                       <div className="item-info">
 
                             <li className="item-name"><b>{this.props.itemData.name.eng}</b></li>
-          <div  className="item-price"><span className="price"><b>{this.props.itemData.pricePerUnit}</b></span><span> ${this.props.itemData.stnCurrency} </span><span> per {this.props.itemData.stnUnit} </span></div>
+          <div  className="item-price"><span className="price"><b>{this.props.itemData.pricePerUnit}</b></span><span> ${this.props.itemData.stnCurrency} </span><span className="smaller-font"> per {this.props.itemData.stnUnit} </span></div>
 
 
-                              <div className="item-quantity"  ><input  min="0" type="text"  name="quantity" id={inputType}  onChange={this.setQuantity} type="number"></input> <span>{this.props.itemData.stnUnit} </span>
+                              <div className="item-quantity">  <span>  <input min="0"   name="quantity" id={inputType}  onChange={this.setQuantity} type="number" className="form-control" ></input> </span><span className="smaller-font">{this.props.itemData.stnUnit} </span>
                               <span  onClick={this.addToCart} className="shopping-cart">
-                              <img src="http://i1149.photobucket.com/albums/o592/Yosuke_Ayrton_Hishinuma/1489142454_meanicons_59_zpsiacry9ga.png">
-                              </img>
+                            <button><i className="fa fa-plus" aria-hidden="true"></i></button>
                               </span>
 
                             </div>

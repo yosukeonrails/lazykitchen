@@ -1,1 +1,2 @@
 "sendgrid.env" 
+"export SENDGRID_API_KEY='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'"  echo "sendgrid.env"  source ./sendgrid.env

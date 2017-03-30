@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-var OrderSchema = new mongoose.Schema({
+var ItemSchema = new mongoose.Schema({
 
   id:String,
   quantity:Number,
@@ -11,4 +11,4 @@ var OrderSchema = new mongoose.Schema({
   dollarUnit:String
 });
 
-var Order= module.exports = mongoose.model('Order', OrderSchema);
+var Item= module.exports = mongoose.model('Item', ItemSchema);

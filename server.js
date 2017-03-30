@@ -4,8 +4,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var config= require('./config');
-var Item= require('./models/items.js');
-var Order= require('./models/order.js');
+var Item= require('./models/item.js');
+var Product= require('./models/product.js');
+
+
 
 
 var app = express();
@@ -39,7 +41,21 @@ app.use(require('cookie-parser')());
 app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 
-app.post('/order', function(req, res){
+app.get('/item', function(req, res){
+
+  Item.find({}, function(err , data){
+
+    if(err){
+        console.log(err);
+    }
+
+res.json(data);
+    console.log(data);
+  });
+
+});
+
+app.post('/item', function(req, res){
 
   let orderData= {
 
@@ -51,7 +67,7 @@ app.post('/order', function(req, res){
     dollarUnit:req.body.dollarUnit
 };
 
-Order.findOneAndUpdate({ id: req.body.id},{$set:orderData},{upsert:true, new:true},function(err,data){
+Item.findOneAndUpdate({ id: req.body.id},{$set:orderData},{upsert:true, new:true},function(err,data){
       if(err){
 
       }
@@ -62,9 +78,9 @@ Order.findOneAndUpdate({ id: req.body.id},{$set:orderData},{upsert:true, new:tru
 });
 
 
-app.get('/items', function(req, res){
+app.get('/product', function(req, res){
 
-    Item.find({}, function(err, data){
+    Product.find({}, function(err, data){
 
           if(err){
 
@@ -76,7 +92,7 @@ app.get('/items', function(req, res){
 });
 
 /// post a product as admin //
-app.post('/item', function(req, res){
+app.post('/product', function(req, res){
 
   let itemData= {
     name:{eng:req.body.eng,
@@ -94,7 +110,7 @@ app.post('/item', function(req, res){
     id:req.body.id
 };
 
-Item.findOneAndUpdate({ id:req.body.id},{$set:itemData},{upsert:true, new:true},function(err, data){
+Product.findOneAndUpdate({ id:req.body.id},{$set:itemData},{upsert:true, new:true},function(err, data){
       if(err){
 
       }

@@ -27,6 +27,18 @@ export var updateCartLength= function(cartLength){
 };
 
 
+export var SET_INVOICE_LOG='SET_INVOICE_LOG';
+
+export var setInvoiceLog= function(invoiceLog){
+
+      return{
+        type:SET_INVOICE_LOG,
+        invoiceLog:invoiceLog
+      };
+
+};
+
+
 
 export var SUBMIT_ORDER_INFO='SUBMIT_ORDER_INFO';
 

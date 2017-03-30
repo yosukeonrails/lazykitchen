@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-var ItemSchema = new mongoose.Schema({
+var ProductSchema = new mongoose.Schema({
 
   name:{eng:String,
        cant:String,
@@ -19,4 +19,4 @@ var ItemSchema = new mongoose.Schema({
 
 });
 
-var Item= module.exports = mongoose.model('Item', ItemSchema);
+var Product= module.exports = mongoose.model('Product', ProductSchema);

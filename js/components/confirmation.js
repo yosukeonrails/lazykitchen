@@ -56,6 +56,27 @@ export class Confirmation extends React.Component {
 
      render(){
 
+
+          var email_subject= "Hello!"+this.props.orderInfo.name+"! Here is your order confirmation!";
+         emailjs.send("default_service","lazyorder",{
+         email_to: this.props.orderInfo.email,
+         email_subject:email_subject,
+         order_name:this.props.orderInfo.name,
+         order_confirmation:this.props.orderInfo.confirmationCode,
+         order_email:this.props.orderInfo.email,
+         order_list: this.props.invoiceLog,
+         order_total:this.props.orderInfo.cartTotal
+
+         })
+         .then(
+         function(response) {
+         console.log(" EMAIL SUCCESS", response);
+         },
+         function(error) {
+         console.log("FAILED", error);
+         }
+        );
+
        window.scroll(0, 200)
 
      return (
@@ -91,7 +112,8 @@ var mapStateToProps=function(state){
    return {
        cartLength:state.shopping.cartLength,
        cartArray: state.shopping.cartArray,
-       orderInfo:state.shopping.orderInfo
+       orderInfo:state.shopping.orderInfo,
+       invoiceLog:state.shopping.invoiceLog
    }
 
 }

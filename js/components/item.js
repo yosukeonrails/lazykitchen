@@ -49,7 +49,9 @@ export class Item extends React.Component {
          this.setQuantity= this.setQuantity.bind(this);
          this.addToCart= this.addToCart.bind(this);
      }
-
+     componentWillMount(){
+       this.setState({itemQuantity: 1 });
+     }
      setQuantity(event){
 
        this.setState({
@@ -135,7 +137,7 @@ var inputType="";
           <div  className="item-price"><span className="price"><b>{this.props.itemData.pricePerUnit}</b></span><span> ${this.props.itemData.stnCurrency} </span><span className="smaller-font"> per {this.props.itemData.stnUnit} </span></div>
 
 
-                              <div className="item-quantity">  <span>  <input min="0"   name="quantity" id={inputType}  onChange={this.setQuantity} type="number" className="form-control" ></input> </span><span className="smaller-font">{this.props.itemData.stnUnit} </span>
+                              <div className="item-quantity">  <span>  <input min="0"  name="quantity" id={inputType}  onChange={this.setQuantity} type="number" className="form-control" ></input> </span><span className="smaller-font">{this.props.itemData.stnUnit} </span>
                               <span  onClick={this.addToCart} className="shopping-cart">
                             <button><i className="fa fa-plus" aria-hidden="true"></i></button>
                               </span>
